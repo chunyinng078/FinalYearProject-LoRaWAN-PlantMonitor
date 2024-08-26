@@ -517,7 +517,7 @@ if (
 
                             <!-- pagination -->
                             <nav>
-                                <ul class="pagination justify-content-center">
+                                <ul class="pagination justify-content-center overflow-scroll">
                                     <?php
 
                                     //to first page
