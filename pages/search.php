@@ -517,30 +517,46 @@ if (
 
                             <!-- pagination -->
                             <nav>
-                                <ul class="pagination justify-content-center overflow-scroll">
+                                <ul class="pagination justify-content-center">
                                     <?php
-
-                                    //to first page
+                                    // To first page
                                     if ($currentPage > 1) {
                                     ?>
                                         <li class="page-item">
                                             <a class="page-link" href="<?php echo $href; ?>page=1">First</a>
                                         </li>
                                     <?php }
-                                    // page number
-                                    for ($i = 1; $i <= $totalPages; $i++) { ?>
+
+                                    // Define the range of pages to show
+                                    $range = 2; // Number of pages to show on either side of the current page
+                                    $start = max(1, $currentPage - $range);
+                                    $end = min($totalPages, $currentPage + $range);
+
+                                    // Show ellipsis before the start
+                                    if ($start > 1) {
+                                        echo '<li class="page-item"><span class="page-link">...</span></li>';
+                                    }
+
+                                    // Page numbers
+                                    for ($i = $start; $i <= $end; $i++) {
+                                    ?>
                                         <li class="page-item <?php if ($i == $currentPage) { ?> active <?php } ?>">
                                             <a class="page-link" href="<?php echo $href; ?>page=<?php echo $i; ?>"><?php echo $i; ?></a>
                                         </li>
-                                    <?php } ?>
+                                    <?php }
 
-                                    <!-- to last page -->
-                                    <?php if ($currentPage < $totalPages) { ?>
+                                    // Show ellipsis after the end
+                                    if ($end < $totalPages) {
+                                        echo '<li class="page-item"><span class="page-link">...</span></li>';
+                                    }
+
+                                    // To last page
+                                    if ($currentPage < $totalPages) {
+                                    ?>
                                         <li class="page-item">
                                             <a class="page-link" href="<?php echo $href; ?>page=<?php echo $totalPages; ?>">Last</a>
                                         </li>
                                     <?php } ?>
-
                                 </ul>
                             </nav>
                         </div>
