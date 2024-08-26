@@ -38,7 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    if ($result->fetch_assoc()) {   // if verification code is correct
+    // if ($result->fetch_assoc()) {   // if verification code is correct
+    if (true) {
         $_SESSION['verified'] = 'verified';
         header('location: ./liveView.php');
     } else {    // if verification code is incorrect
@@ -82,12 +83,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <!-- verification code -->
                 <div class="mb-3">
                     <label for="v_code" class="form-label">Enter the verification code that sent to your email:</label>
-                    <input type="text" class="form-control" id="v_code" name="v_code" required>
+                    <input type="text" class="form-control" id="v_code" name="v_code" disabled>
                 </div>
 
                 <!-- submit form -->
                 <div class="row text-end">
                     <button type="submit" class="btn btn-primary">Verify</button>
+                    <p class="text-center mt-2">Just click the Verify button</p>
                 </div>
             </form>
         </div>
