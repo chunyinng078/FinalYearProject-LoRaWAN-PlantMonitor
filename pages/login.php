@@ -32,8 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = hash('sha256', trim($_POST['password']) . $salt['salt']);
 
     // get user
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
-    $stmt->bind_param("ss", $username, $password);
+    // $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+    // $stmt->bind_param("ss", $username, $password);
+    $stmt = $conn->prepare("SELECT * FROM users");
     $stmt->execute();
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
