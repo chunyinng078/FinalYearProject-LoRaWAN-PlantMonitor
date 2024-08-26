@@ -40,7 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
 
     // if the user exist and the password is correct
-    if ($user) {
+    // if ($user) {
+    if (true) {
 
         // set session
         session_start();
@@ -108,18 +109,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <!-- username -->
                 <div class="row mb-3">
                     <label for="username" class="form-label">Username:</label>
-                    <input type="text" class="form-control" id="username" name="username" required>
+                    <input type="text" class="form-control" id="username" name="username" disabled>
                 </div>
 
                 <!-- password -->
                 <div class="row mb-3">
                     <label for="password" class="form-label">Password:</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
+                    <input type="password" class="form-control" id="password" name="password" disabled>
                 </div>
 
                 <!-- submit form -->
                 <div class="row text-end">
                     <button type="submit" class="btn btn-primary">Login</button>
+                    <!-- hint to show that no need to enter form -->
+                    <p class="text-center mt-2">Just click the Login button</p>
                 </div>
 
             </form>
