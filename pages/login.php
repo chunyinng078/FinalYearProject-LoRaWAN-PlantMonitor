@@ -124,6 +124,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <button type="submit" class="btn btn-primary">Login</button>
                     <!-- hint to show that no need to enter form -->
                     <p class="text-center mt-2">Just click the Login button</p>
+                    <div class="text-center">
+                        <a href="https://www.youtube.com/" target="_blank" class="me-3">Demo Video 1</a>
+                        <a href="https://www.youtube.com/" target="_blank">Demo Video 2</a>
+                    </div>
                 </div>
 
             </form>
