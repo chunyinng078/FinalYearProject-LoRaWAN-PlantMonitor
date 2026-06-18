@@ -8,7 +8,7 @@
 * **Hardware & Network:** Arduino, LoRa End Nodes, The Things Stack (TTS), LoRaWAN Protocol
 * **Security:** AES Encryption, Secure Email Verification
 * **Web Backend & DB:** PHP, MySQL
-* **Frontend:** HTML/CSS, JavaScript
+* **Frontend:** HTML/CSS, JavaScript, Bootstrap
 
 ## ✨ Core Features
 
