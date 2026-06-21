@@ -1,5 +1,7 @@
 # 🌿 LoRaWAN Plant Monitoring System
 
+<img width="3820" height="1944" alt="image" src="https://github.com/user-attachments/assets/70e6e2c2-0c15-442d-bd83-f54363b1fc20" />
+
 > An End-to-End IoT solution designed for agricultural monitoring, leveraging LoRaWAN architecture for secure data transmission and a PHP-based web dashboard for centralized management.
 
 **🎥 [Watch Project Demo](https://youtu.be/oPejHBNpKV4)** | **📊 [View Presentation Slides](https://1drv.ms/b/s!AgluXs-pQk8WrPN7x25PJYITs-jF5A?e=zXE1T8)**
